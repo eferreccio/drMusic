@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f2ede4;
+  padding-top: 300px;
+}
+
+.rounded-circle {
+  width: 20vw;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+.datos {
+  display: flex;
+  justify-content: center;
+  align-self:center;
+}
+
+.datos-hijo {
+
+  align-self: center;
+}
+
+.lista-datos li{
+  list-style-type: none;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+
+@media (min-width: 769px) {
+
+  body {
+    padding-top: 170px;
+  }
+
+
+}

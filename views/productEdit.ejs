@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/product_create.css" />
+  </head>
+ <body>
+      <!--INICIO DEL HEADER-->
+      <%- include('./partials/header') %>
+      <!--FIN DEL HEADER-->
+
+      <div class="main-title">
+        <div class="logo-mediano">
+            <img class="mid-logo" src="/img/Dr-F2EDE4.png" alt="our-logo" />
+          </div>
+          <div>
+            <p class="message-create">Editar Producto</p>
+          </div>
+      </div>
+
+
+      <form action="/products/update?_method=PUT" method="POST" enctype="multipart/form-data">
+        <ul class="ul-form">
+            <div class="create_left">
+                <div class="complete-name">
+                  <input type="number" name="idVisible" class="name" value=<%= product.prodId %> disabled>  
+                  <input type="hidden"  name="prodId"class="name" value=<%= product.prodId %> >
+                </div>  
+                <div class="complete-name">
+                    <input type="text" name="nombre" class="name" value=<%= product.nombre %>>
+                </div>
+                <div class="complete-name">
+                    <input type="text" name="descripcion" class="name" value= <%= product.descripcion %>>
+                </div>
+                <div class="complete-name">
+                    <input type="number" name="precio" class="name" value= <%= product.precio %>>
+                </div>
+                <div class="complete-name">
+                    <input type="number" name="alto" class="name" value=<%= product.alto %>>
+                </div>
+                <div class="complete-name">
+                    <input type="number" name="ancho" class="name" value=<%= product.ancho %>>
+                </div>
+                <div class="complete-name">
+                    <input type="number" name="profundidad" class="name" value=<%= product.profundidad %>>
+                </div>
+                <div class="complete-name">
+                    <input type="text" name="color" class="name" value=<%= product.color %>>
+                </div>
+            </div>
+
+
+            <div class="create_right">
+              <div class="item">
+                <p>Imagen asociada</p>
+                <input type="file" name="imagen" accept="image/*" value=<%= product.imagen %>>
+              </div>                
+              <div class="item">
+                <p>Categoría</p>
+                <select name="categoria" required>
+                  <option value="undefined">Seleccione una categoría</option>
+                  <option value="guitarra" <%= product.categoria  == 'guitarra' ? 'selected' : ''%>>Guitarra</option>
+                  <option value="bajo"  <%= product.categoria  == 'bajo' ? 'selected' : ''%>>Bajo</option>
+                  <option value="teclado" <%= product.categoria  == 'teclado' ? 'selected' : ''%>>Teclado</option>
+                  <option value="audio" <%= product.categoria  == 'audio' ? 'selected' : ''%>>Audio</option>
+                  <option value="bateria" <%= product.categoria  == 'bateria' ? 'selected' : ''%>>Bateria</option>                    
+                  <option value="accesorios" <%= product.categoria  == 'accesorios' ? 'selected' : ''%>>Accesorios</option>
+                </select>
+              </div>
+                 <div class="create-account-buttom">
+                    <button type="submit" name="create-account" class="create-account-tex">
+                      GUARDAR CAMBIOS
+                    </button>
+                </div>
+            </div>      
+        </ul>
+        <br>
+      </form>
+
+  
+      <!--INICIO DEL FOOTER-->
+      <%- include('./partials/footer') %>
+      <!--FIN DEL FOOTER--> 
+  </body> 
+  </html>

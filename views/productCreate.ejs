@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/product_create.css" />
+  </head>
+ <body>
+      <!--INICIO DEL HEADER-->
+      <%- include('./partials/header') %>
+      <!--FIN DEL HEADER-->
+
+      <div class="main-title">
+        <div class="logo-mediano">
+            <img class="mid-logo" src="/img/Dr-F2EDE4.png" alt="our-logo" />
+          </div>
+          <div>
+            <p class="message-create">Crear nuevo producto</p>
+          </div>
+      </div>
+
+
+      <form action="/products/create" method="POST" enctype="multipart/form-data">
+        <ul class="ul-form">
+            <div class="create_left">
+                <div class="complete-name">
+                    <input type="text" name="nombre" class="name" placeholder="Nombre Producto">
+                </div>
+                <div class="complete-name">
+                    <input type="text" name="descripcion" class="name" placeholder="Descripción">
+                </div>
+                <div class="complete-name">
+                    <input type="number" name="precio" class="name" placeholder="Precio">
+                </div>
+                <div class="complete-name">
+                    <input type="number" name="alto" class="name" placeholder="Alto">
+                </div>
+                <div class="complete-name">
+                    <input type="number" name="ancho" class="name" placeholder="Ancho">
+                </div>
+                <div class="complete-name">
+                    <input type="number" name="profundidad" class="name" placeholder="Profundidad">
+                </div>
+                <div class="complete-name">
+                    <input type="text" name="color" class="name" placeholder="Color">
+                </div>
+            </div>
+
+
+            <div class="create_right">
+                <div class="item">
+                    <p>Imagen asociada</p>
+                    <input type="file" name="img" accept="image/*">
+                </div>                
+                <div class="item">
+                  <p>Categoría</p>
+                    <select name="categoria" required>
+                      <option value="undefined">Seleccione una categoría</option>
+                      <option value="guitarra">Guitarra</option>
+                      <option value="bajo">Bajo</option>
+                      <option value="teclado">Teclado</option>
+                      <option value="audio">Audio</option>
+                      <option value="bateria">Bateria</option>                    
+                      <option value="accesorios">Accesorios</option>
+                    </select>
+                 </div>
+                 <div class="create-account-buttom">
+                    <button type="submit" name="create-account" class="create-account-tex">
+                      CREAR PRODUCTO
+                    </button>
+                </div>
+            </div>      
+        </ul>
+        <br>
+      </form>
+
+  
+      <!--INICIO DEL FOOTER-->
+      <%- include('./partials/footer') %>
+      <!--FIN DEL FOOTER--> 
+  </body> 
+  </html>

@@ -1,0 +1,32 @@
+[
+  {
+    "userId": 0,
+    "firstName": "admin",
+    "lastName": "admin",
+    "email": "admin@drmusic.com",
+    "telCelular": null,
+    "telAlternativo": null,
+    "password": "$2a$10$WaTgvQSSrElOIqV7uEOpUeAHIkdDmTxWgGuKojsUi3YBYKL0XS5E.",
+    "rol": "admin",
+    "estado": "activo",
+    "avatar": "default.png",
+    "fechaCreacion": "2021-06-01",
+    "fechaModificacion": null,
+    "fechaUltimoLogin": null
+  },
+  {
+    "userId": 1,
+    "firstName": "Keith",
+    "lastName": "Richards",
+    "email": "keith@keith.com",
+    "telCelular": null,
+    "telAlternativo": null,
+    "password": "$2a$10$VtcDhRPHQvNrYPeHUQ/OoOCDiy5ahmkW1HbYn6BLT3DLQMg6u3Hou",
+    "rol": "user",
+    "estado": "activo",
+    "avatar": "img-1640312158425.jpg",
+    "fechaCreacion": "Thu Dec 23 2021 23:15:58 GMT-0300 (hora estándar de Argentina)",
+    "fechaModificacion": null,
+    "fechaUltimoLogin": null
+  }
+]
