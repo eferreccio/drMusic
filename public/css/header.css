@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
@@ -51,7 +52,7 @@ header {
 }
 
 .hamburguer-button {
-  background-color: #03264c;
+  
   display: block;
   color: white;
   max-width: 50px;
